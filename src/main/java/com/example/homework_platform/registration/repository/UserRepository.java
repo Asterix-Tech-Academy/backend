@@ -4,7 +4,7 @@ import com.example.homework_platform.registration.model.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository("registrationUserRepository")
 public class UserRepository {
     private final JdbcTemplate jdbcTemplate;
 
