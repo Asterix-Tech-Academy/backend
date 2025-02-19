@@ -26,6 +26,7 @@ public class UserService {
         user.setFirstName(request.firstName);
         user.setLastName(request.lastName);
         user.setEmail(request.email);
+        user.setUsername(request.username);
         user.setPasswordHash(passwordEncoder.encode(request.password));
         user.setRole(request.role);
         user.setPhoneNumber(request.phoneNumber);
@@ -33,6 +34,7 @@ public class UserService {
         user.setSubject(request.subject);
         user.setIsClassTeacher(request.isClassTeacher);
         user.setQualification(request.qualification);
+        user.setClassName(request.className);
 
         userRepository.save(user);
         return "User registered successfully!";
