@@ -14,6 +14,7 @@ public class RegisterRequest {
 
     public String firstName;
     public String lastName;
+    public String username;
     public String password;
     public String role;
     public String phoneNumber;
@@ -21,4 +22,6 @@ public class RegisterRequest {
     public String subject;
     public Boolean isClassTeacher;
     public String qualification;
+    public String className;
 }
+
