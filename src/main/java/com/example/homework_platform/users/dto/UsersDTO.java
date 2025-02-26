@@ -1,4 +1,4 @@
-package com.example.homework_platform.Users.dto;
+package com.example.homework_platform.users.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.Email;

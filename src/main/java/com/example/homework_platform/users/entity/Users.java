@@ -1,11 +1,11 @@
-package com.example.homework_platform.Users.entity;
+package com.example.homework_platform.users.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 @Getter
 @Setter
@@ -27,6 +27,5 @@ public class Users {
     private String qualification;
     private String classId;
 
-    public void setCreatedAt(java.sql.Timestamp created_at) {
-    }
+
 }

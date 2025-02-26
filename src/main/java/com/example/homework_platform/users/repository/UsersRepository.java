@@ -1,6 +1,6 @@
-package com.example.homework_platform.Users.repository;
+package com.example.homework_platform.users.repository;
 
-import com.example.homework_platform.Users.entity.Users;
+import com.example.homework_platform.users.entity.Users;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;

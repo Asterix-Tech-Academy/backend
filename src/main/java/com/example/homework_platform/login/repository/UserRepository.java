@@ -21,21 +21,26 @@ public class UserRepository {
             rs.getString("username"),
             rs.getString("email"),
             rs.getString("password_hash"),
-            rs.getString("role")
+            rs.getString("role"),
+            rs.getString("status")
     );
 
-    public List<User> findAll() { //select users
-        return jdbcTemplate.query("SELECT * FROM Users", userRowMapper);
+    public List<User> findAll() {
+        String sql = "SELECT * FROM Users";
+        return jdbcTemplate.query(sql, userRowMapper);
     }
 
     public Optional<User> findByUsername(String username) {
-        List<User> users = jdbcTemplate.query("SELECT * FROM Users WHERE username = ?", userRowMapper, username);
-        return users.isEmpty() ? Optional.empty() : Optional.of(users.get(0));
+        String sql = "SELECT * FROM Users WHERE username = ?";
+        List<User> users = jdbcTemplate.query(sql, userRowMapper, username);
+        if (users.isEmpty()) {
+            return Optional.empty();
+        }
+        return Optional.of(users.get(0));
     }
 
-    public void save(User user) {
-        jdbcTemplate.update("INSERT INTO Users (username, email, password_hash, role) VALUES (?, ?, ?, ?)",
-                user.getUsername(), user.getEmail(), user.getPasswordHash(), user.getRole());
+    public void delete(String username) {
+        String sql = "UPDATE Users SET status = 'DELETED' WHERE username = ?";
+        jdbcTemplate.update(sql, username);
     }
 }
-

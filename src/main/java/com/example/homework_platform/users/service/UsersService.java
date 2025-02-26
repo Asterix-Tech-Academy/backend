@@ -1,8 +1,7 @@
-package com.example.homework_platform.Users.service;
+package com.example.homework_platform.users.service;
 
-import com.example.homework_platform.Users.entity.Users;
-import com.example.homework_platform.Users.repository.UsersRepository;
-import com.example.homework_platform.Users.repository.UsersRepository;
+import com.example.homework_platform.users.entity.Users;
+import com.example.homework_platform.users.repository.UsersRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;

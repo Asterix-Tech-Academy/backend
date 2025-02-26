@@ -1,7 +1,7 @@
-package com.example.homework_platform.Users.controller;
+package com.example.homework_platform.users.controller;
 
-import com.example.homework_platform.Users.entity.Users;
-import com.example.homework_platform.Users.service.UsersService;
+import com.example.homework_platform.users.entity.Users;
+import com.example.homework_platform.users.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

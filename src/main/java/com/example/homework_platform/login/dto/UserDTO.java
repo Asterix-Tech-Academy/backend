@@ -5,15 +5,18 @@ public class UserDTO {
     private String username;
     private String email;
     private String role;
+    private String status;
 
     public UserDTO() {
     }
 
-    public UserDTO(int id, String username, String email, String role) {
+
+    public UserDTO(int id, String username, String email, String role, String status) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.role = role;
+        this.status = status;
     }
 
     public int getId() {
@@ -46,6 +49,14 @@ public class UserDTO {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
 
