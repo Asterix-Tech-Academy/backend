@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/submissions")
+@RequestMapping("/submissions")
 public class SubmissionController {
 
     private final SubmissionService submissionService;
