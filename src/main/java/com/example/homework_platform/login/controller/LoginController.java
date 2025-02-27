@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/")
 public class LoginController {
 
     private final LoginService loginService;
@@ -22,7 +22,7 @@ public class LoginController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
         try {
-            Optional<UserDTO> userDTO = loginService.login(loginRequest.getIdentifier(), loginRequest.getPassword());
+            Optional<UserDTO> userDTO = loginService.login(loginRequest.getIdentifier(), loginRequest.getPassword(), loginRequest.getRole());
 
             if (userDTO.isPresent()) {
                 return ResponseEntity.ok(userDTO.get());
