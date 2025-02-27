@@ -1,6 +1,6 @@
-package com.example.homework_platform.homeworks.services;
+package com.example.homeworkplatform.homeworks.services;
 
-import com.example.homework_platform.homeworks.models.Homework;
+import com.example.homeworkplatform.homeworks.models.Homework;
 import org.springframework.stereotype.Service;
 
 @Service

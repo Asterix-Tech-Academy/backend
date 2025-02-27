@@ -1,4 +1,4 @@
-package com.example.homework_platform.homeworks.models;
+package com.example.homeworkplatform.homeworks.models;
 
 import java.sql.Timestamp;
 import java.util.Date;

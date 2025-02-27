@@ -1,7 +1,7 @@
-package com.example.homework_platform.homeworks.controllers;
+package com.example.homeworkplatform.homeworks.controllers;
 
-import com.example.homework_platform.homeworks.models.Homework;
-import com.example.homework_platform.homeworks.services.HomeworkService;
+import com.example.homeworkplatform.homeworks.models.Homework;
+import com.example.homeworkplatform.homeworks.services.HomeworkService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
