@@ -19,9 +19,16 @@ public class LoginService {
         this.passwordEncoder = passwordEncoder;
     }
 
+
+
     public Optional<UserDTO> login(String identifier, String password, String role) {
-        User user = loginRepository.findUserByIdentifier(identifier)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid username or email"));
+        if(identifier == null || password == null || role == null){
+            throw new IllegalStateException("Identier,password or role is null");
+        }
+        User user = loginRepository.findUserByIdentifier(identifier).orElse(null);
+        if(user == null){
+            return Optional.empty();
+        }
 
         if ("pending".equalsIgnoreCase(user.getStatus())) {
             throw new IllegalStateException("Your account is pending approval.");
@@ -34,9 +41,10 @@ public class LoginService {
             throw new IllegalArgumentException("Invalid username or email");
         }
 
-        if (role != null && !role.equalsIgnoreCase(user.getRole())) {
+        if (!role.equalsIgnoreCase(user.getRole())) {
             throw new IllegalStateException("Role does not match.");
         }
+
 
         return Optional.of(convertToDTO(user));
     }
